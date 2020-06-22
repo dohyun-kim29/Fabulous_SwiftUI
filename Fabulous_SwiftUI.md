@@ -1,4 +1,4 @@
-# SwiftUI 기초
+SwiftUI 기초
 
 1. SwiftUI에 대하여
 
@@ -91,4 +91,39 @@
      
 
    - Preview 단축키는 Option + Command + P 이다.
+
+     
+
+   
+
+4. Content View 살펴보기
+
+   - ContentView.Swift에 있는 **ContentView_Previews** 구조체는 프리뷰를 위한 용도이다.
+
+     
+
+   - ContentView의 기본 코드
+
+   - ```SwiftUI
+     struct ContentView: View {
+     	var body: some View {
+     		Text("Hello World")
+     	}
+     }
+     ```
+
+     
+
+   - View 타입은 **프로토콜**로 선언되어았다
+
+   - View 프로토콜
+
+   - ````SwiftUI
+     protocol View {
+     	associatedtype Body: View
+     	var body: Self.Body { get }
+     }
+     ````
+
+   - 재귀호출이 일어나지 않게 컨테이너 뷰에는 **Never** 타입이 사용된다.
 
