@@ -68,3 +68,27 @@
 
      SwiftUI에서는 **데이터가 변경되는 즉시 UI도 자동으로 갱신**된다.
 
+     
+
+   
+
+3. 프로젝트 생성
+
+   - 기존 Storyboard 가 아닌 **SwiftUI** 선택
+
+     
+
+   - ViewController.Swift 대신 **ContentView.Swift**파일이 생긴다.
+
+     
+
+   - 당연하게도, Main.storyboard 는 삭제되었다.
+
+     
+
+   - Preview만을 위한 에셋인 **Preview Assets.xcassets** 가 추가되었다.
+
+     
+
+   - Preview 단축키는 Option + Command + P 이다.
+
