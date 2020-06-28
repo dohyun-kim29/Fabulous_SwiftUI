@@ -215,3 +215,22 @@
 
     - **.scaledToFit** 수식어와 **.sacledToFill** 수식어는 각각 비율을 유지한채로 가능한한 최대로 늘려주는데 ~fit수식어는 최대 크기를 주어진 공간 내에서 처리하고, ~Fill 수식어는 화면 밖을 넘어나 더 크게 표현될 수 있다. 
 
+      
+
+    - 이미지의 비율에 대해 좀더 세부적인 조정이 필요하다면 **aspectRatio** 수식어를 사용해야 한다.
+
+    - ```SwiftUI
+      .aspectRatio(CGSize(width: 1.6, height: 1), contentMode: fit)
+      //contentMode를 적용하고, 너비가 높이에 비해 1.6배의 비율을 가지도록 한다.
+      ```
+
+      
+
+    - **ClipShape** 수식어를 이용해 원하는 모양으로 자를 수 있다.
+
+    - ```SwiftUI
+      .clipShape(Circle())
+      ```
+
+      
+
