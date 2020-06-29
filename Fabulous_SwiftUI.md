@@ -234,3 +234,15 @@
 
       
 
+    - 이미지에는 **template**와 **original** 두개의 렌더링 모드가 사용된다.
+
+    - **template** - 불투명 영역이 가진 색을 무시하고 원하는 색으로 번경해 사용 가능
+
+    - **original** - 항상 이미지 본래의 색을 유지합니다.
+
+    - ```SwiftUI
+      .randeringMode(.original)
+      ```
+
+    - **SF Symblos**이라는 애플에서 제공하는 이미지를 사용할 수도 있다.
+
