@@ -253,7 +253,60 @@
 	3. 뷰 레이아웃
 
     - **스택** 은 뷰를 배치하는데 쓰는 컨테이너 뷰이다.
+
+      
+
     - 가로 방향으로 뷰를 배열하는 **HStack** 
+
     - 세로 방향으로 배열하는 **VStack**
-    - 뷰 계층을 겹겹이 쌓아 올리는 **ZStack** 이 있다.
+
+    - 뷰 계층을 겹겹이 쌓아 올리는 **ZStack** 이 있다. 
+
+      
+
+    - 프로퍼티에는 반드시 하나의 값만 반환해야하기 때문에 이러한 컨테이너 뷰를 사용한다.
+
+    - ```SwiftUI
+      Hstack {
+      	Rectangle()
+      		.fill(Color.green)
+      		.frame(width: 150, height: 150)
+      	Rectangle()
+      		.fill(Color.yellow)
+      		.frame(width: 150, height: 150)
+      }
+      ```
+
+      
+
+    - **spacing**의 값을 명시적으로 지정해 줌으로써 원하는 간격만큼 떨어지게 할 수 있다.
+
+    - ```SwiftUI
+      Hstack(spacing: 0) {...}
+      ```
+
+      
+
+    - 객체를 정렬해주는 **Alignment** 매개변수는 각 스택마다 서로 **다른** 값을 받아들인다.
+
+    - 예를 들면, 가로 방향으로 배열해주는 HStack은 세로 방향에 대한 정렬값을 주어야 한다.
+
+    - ```SwiftUI
+      Hstack(alignment: .top) {
+      	Rectangle().fill(Color.green).frame(width: 150, height: 150)
+      	Rectangle().fill(Color.yellow)
+      		.frame(width: 150, height: 550)
+      }
+      ```
+
+    - **스택에도 뷰 프로토콜이 가진 수식어를 사용할 수 있다.**
+
+    - ```SwiftUI
+      HStack {
+      	Text("HStack").font(.title).foregroundColor(Color.blue)
+      	Text()
+      }
+      ```
+
+    - 
 
