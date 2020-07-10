@@ -352,4 +352,29 @@
 
 
 4. 실전 기능을 구현해보며 연습하기
+
    - **Overlay** 는 뷰 원본의 공간을 기준으로 그 위에 새로운 뷰를 중첩하여 쌓는 기능을 하는데, 이떄 **ZStack** 으로 구현한 코드를 overlay를 사용하여 구현할 수 도 있다.
+
+   - 
+
+     ```SwiftUI
+     	Rectangle().fill(Color.green).frame(width: 150, height: 150)
+     		.overlay(
+     			Rectangle().fill(Color.yellow)
+     		`)
+     ```
+
+     
+
+   - **Background** 는 overlay와 비슷하지만  overlay는 윗 방향으로 뷰를 추가해주는 반면에, background는 아래 방향으로 뷰를 추가해준다.
+
+   - ```SwiftUI
+     Rectangle().fill(Color.yello).frame(width: 150, height: 150)
+     	.background(
+     		Rectangle().fill(Color.green)
+     	)
+     ```
+
+   - 
+
+   - 
